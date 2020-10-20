@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/main.css">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <span v-on:click="changeText">Click</span>
+        <span @mouseover="title='Hello World!'">Over</span>
+        <p>{{title}}</p>
+        <p>Color: {{style}}</p>
+        <input type="text" @input="style=$event.target.value">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>

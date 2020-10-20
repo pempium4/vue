@@ -1,0 +1,16 @@
+body {
+  background: antiquewhite;
+  margin: 0 auto;
+  max-width: 800px;
+}
+body div {
+  padding: 2rem;
+}
+body p,
+body span {
+  color: chocolate;
+  font-size: 2rem;
+}
+body span {
+  cursor: pointer;
+}
