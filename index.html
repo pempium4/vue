@@ -2,17 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/main.css">
     <title>Vue.js</title>
 </head>
 <body>
     <div id="app">
-        <span v-on:click="changeText">Click</span>
-        <span @mouseover="title='Hello World!'">Over</span>
         <p>{{title}}</p>
-        <p>Color: {{style}}</p>
+        <div class="btn-group">
+            <button class="btn btn-light" v-on:click="changeText">Click</button>
+            <button class="btn btn-light" @mouseover="title='Hello World!'">Over</button>
+        </div>
+        <p v-bind:class="style" :align="style">Color or align: {{style}}</p>
         <input type="text" @input="style=$event.target.value">
+        <div>
+            <p>Квадрат числа {{value}} = {{doubleValue}}</p>
+            <input type="text" @input="pow($event.target.value)">
+        </div>
+        <p v-if="show">Hide el in DOM</p>
+        <p v-else>Show el in DOM</p>
+        <p v-show="show">Change display</p>
+        <button class="btn btn-light" @click="show = !show">Show/Hide</button>
+        <ol>
+            <li v-for="(person, i) in people">{{i+1}} {{person.name}}. I'm {{person.age}}</li>
+        </ol>
+        <p>Only Capitalize: {{text | capitalize}}</p>
+        <p>Only lowercase: {{text | lowerCase}}</p>
+        <input type="text" @input="text = $event.target.value">
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="JS/main.js"></script>
 </body>

@@ -3,14 +3,23 @@ body {
   margin: 0 auto;
   max-width: 800px;
 }
-body div {
+body #app {
   padding: 2rem;
 }
-body p,
-body span {
+body #app div {
+  margin: 1rem auto;
+  width: 100%;
+}
+body p {
   color: chocolate;
   font-size: 2rem;
 }
-body span {
-  cursor: pointer;
+body ol {
+  margin: 1rem auto;
+}
+.red {
+  background: red;
+}
+.blue {
+  background: blue;
 }
