@@ -1,10 +1,24 @@
+//filter
 Vue.filter('capitalize', function (value){
     value = value.toString();
     return value.replace(/\b\w/g, function (l){
         return l.toUpperCase();
     });
 });
+//filter
 
+//components (templates) !important
+Vue.component('app-car', {
+    data: function (){
+        return {
+            cars: [
+                'BMW', 'Opel', 'Audi', 'Mercedes'
+            ]
+        }
+    },
+    template: '<div class="car"><p v-for="car in cars">{{car}}</p></div>'
+})
+//components (templates) !important
 new Vue({
     el: '#app',
     data: {

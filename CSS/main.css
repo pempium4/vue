@@ -23,3 +23,12 @@ body ol {
 .blue {
   background: blue;
 }
+.car {
+  background: chocolate;
+  border-radius: .5rem;
+}
+.car p {
+  color: antiquewhite!important;
+  font-size: 1.5rem;
+  margin: .5rem;
+}
